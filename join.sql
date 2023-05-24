@@ -1,12 +1,4 @@
-SELECT
-     user_id,
-     product_id,
-     categories_id
-FROM
-    user id
-LEFT JOIN product id ON product_id.user_id = user_id.user.id
-LEFT JOIN categories id ON categories_id.product_id = product_id.product_id
-WHERE product_id.product_id;
-
-
-
+SELECT user.email, product.category_id, categories.user_id
+FROM user
+LEFT JOIN product ON product.user_id = user.id
+LEFT JOIN categories ON categories.product_id = product.id;
